@@ -1,4 +1,6 @@
 import React from "react";
+import { Badge } from "lucide-react";
+
 
 const Product = () => {
  
@@ -7,6 +9,7 @@ const Product = () => {
       <section className="text-black text-center py-6 flex flex-col justify-center">
         <div className=" p-8">
           <h1 className="font-bold text-3xl p-4">ALL PRODUCTS</h1>
+         
           <p>
             <span>12</span> products available
           </p>

@@ -1,13 +1,13 @@
 import { Phone, Search,ShoppingCart } from "lucide-react";
-
+import { CategoryNav } from "./category-nav";
 
 function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-amber-50 ">
-        <div className="bg-amber-700 text-primary-foreground py-4 px-8">
-          <div className=" mx-auto text-white  flex flex-col items-start md:items-center justify-between md:text-xl text-sm">
-            <div className="flex flex-col md:items-center md:flex-row gap 2 items-start md:gap-32">
+        <div className="bg-amber-700 text-primary-foreground py-2 px-8">
+          <div className=" mx-auto text-white md:flex-row  flex flex-col items-start md:items-center justify-between md:text-xl text-xl">
+            <div className="flex  md:items-center sm:flex-row justify-between gap-6 md:gap-32">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 <span>+880 1321 208940</span>
@@ -21,7 +21,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-black md:gap-6 px-2 md:px-8 py-2">
+        <div className="flex items-center justify-between text-black md:gap-6 px-2 md:px-8 py-1">
           <div className="h-10 w-auto gap-2 rounded-full bg-accent flex items-center justify-center">
             <span className="text-2xl bg-amber-500 font-bold rounded-full p-2 text-accent-foreground">
               🌿
@@ -58,6 +58,7 @@ function Header() {
             </button>
           </div>
         </div>
+        <CategoryNav />
       </header>
     </>
   );
