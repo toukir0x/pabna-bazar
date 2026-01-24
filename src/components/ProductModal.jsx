@@ -20,7 +20,7 @@ const ProductModal = () => {
      const [quantity, setQuantity] = React.useState(1);
   return (
     <>
-      <div className="p-6">
+      <div className="p-6 inset-0 bg-transparent bg-opacity-50 flex items-center justify-center z-50 sticky">
         <div className=" relative p-6 max-w-3xl border-gray-400 max-h-[90vh]  overflow-y-auto shadow-2xl border-2 mx-auto rounded-2xl bg-white ">
           <X className='absolute top-3 right-4 '/>
           <div>

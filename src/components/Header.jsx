@@ -1,7 +1,7 @@
 import { Phone, Search,ShoppingCart } from "lucide-react";
 import { CategoryNav } from "./category-nav";
 
-function Header() {
+function Header({ selectedCategory, setSelectedCategory }) {
   return (
     <>
       <header className="sticky top-0 z-50 bg-amber-50 ">
@@ -58,7 +58,7 @@ function Header() {
             </button>
           </div>
         </div>
-        <CategoryNav />
+        <CategoryNav selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       </header>
     </>
   );

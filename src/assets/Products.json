@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "name": "Ashwagandha Powder",
+    "price": 1200,
+    "image": "/ashwagandha-powder-package.jpg",
+    "badge": "Organic",
+    "category": "wellness"
+  },
+  {
+    "id": 2,
+    "name": "Himalayan Pink Salt",
+    "price": 750,
+    "image": "/himalayan-pink-salt.jpg",
+    "category": "pantry"
+  },
+  {
+    "id": 3,
+    "name": "Organic Extra Virgin Olive Oil",
+    "price": 2500,
+    "image": "/olive-oil-bottle.png",
+    "category": "oil"
+  },
+  {
+    "id": 4,
+    "name": "African Organic Wild Honey",
+    "price": 2500,
+    "image": "/wild-honey-jar.jpg",
+    "category": "honey"
+  },
+  {
+    "id": 5,
+    "name": "Organic Deshi Ghee",
+    "price": 1550,
+    "image": "/deshi-ghee-jar.jpg",
+    "category": "oil"
+  },
+  {
+    "id": 6,
+    "name": "Gawa Ghee (Premium)",
+    "price": 1700,
+    "originalPrice": 1800,
+    "image": "/gawa-ghee-package.jpg",
+    "badge": "On Sale",
+    "category": "oil"
+  },
+  {
+    "id": 7,
+    "name": "Egyptian Medjool Dates (Large)",
+    "price": 2000,
+    "originalPrice": 2300,
+    "image": "/medjool-dates-package.jpg",
+    "badge": "On Sale",
+    "category": "dates"
+  },
+  {
+    "id": 8,
+    "name": "Premium Honey Nuts Mix",
+    "price": 1500,
+    "image": "/honey-nuts-jar.jpg",
+    "category": "honey"
+  },
+  {
+    "id": 9,
+    "name": "Sundarban Wild Honey",
+    "price": 2200,
+    "originalPrice": 2500,
+    "image": "/sundarban-honey-bottle.jpg",
+    "badge": "On Sale",
+    "category": "honey"
+  },
+  {
+    "id": 10,
+    "name": "Honey Special Combo Pack",
+    "price": 1650,
+    "originalPrice": 1950,
+    "image": "/honey-combo-pack.jpg",
+    "badge": "On Sale",
+    "category": "honey"
+  },
+  {
+    "id": 11,
+    "name": "Organic Mustard Oil",
+    "price": 850,
+    "image": "/mustard-oil-bottle.jpg",
+    "badge": "New",
+    "category": "oil"
+  },
+  {
+    "id": 12,
+    "name": "Premium Tea Collection",
+    "price": 950,
+    "image": "/premium-tea-set.jpg",
+    "category": "beverages"
+  }
+]
