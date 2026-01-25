@@ -4,11 +4,12 @@ import { Badge } from "lucide-react";
 
 
 
-const Product = ({ ...product}) => {
-  // function openModal(product) {
-  //   // setSelectedProduct(product);
-  //   // setIsModalOpen(true);
-  // }
+const Product = ({setSelectedProduct, setIsModalOpen, product}) => {
+ 
+  function openModal(product) {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  }
 
   let discount = 
     Math.round(
@@ -17,12 +18,18 @@ const Product = ({ ...product}) => {
       100,);
   return (
     <>
-      <section className="text-black text-center py-6 flex flex-col justify-center">
+      <section className="text-black text-center py-6 flex flex-col justify-center transition-all duration-300 ">
         {/* show product */}
 
         <div className=" flex flex-wrap gap-6 justify-center ">
           <div className="product   inline-block p-6 shadow-xl shadow-gray-400 border border-gray-300 rounded-2xl">
-            <div className="relative">
+            {/* product image */}
+            <div
+              className="relative"
+              onClick={()=>
+                openModal(product)
+              }
+            >
               <div
                 className="absolute top-2 left-2 z-10"
                 variant={
@@ -34,14 +41,16 @@ const Product = ({ ...product}) => {
               >
                 {product.badge}
               </div>
-                {(discount > 0)&&(
+              {discount > 0 && (
                 <div className="absolute top-2 right-2 ">
                   <div className="h-12 w-12 rounded-full  text-destructive-foreground flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-2xl text-red-700 font-bold leading-none">
                         {discount}%
                       </div>
-                      <div className="text-[20px] text-amber-800 leading-none">OFF</div>
+                      <div className="text-[20px] text-amber-800 leading-none">
+                        OFF
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -51,10 +60,6 @@ const Product = ({ ...product}) => {
                 src={`src/assets/image${product.image}`}
                 alt=""
                 className="w-xs round max-h-80 rounded-xl"
-                onClick={() => {
-                  // openModal(product);
-
-                }}
               />
             </div>
             <div className="details pt-4 text-left space-y-2">
@@ -69,7 +74,6 @@ const Product = ({ ...product}) => {
             </div>
           </div>
         </div>
-        
       </section>
     </>
   );

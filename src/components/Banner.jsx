@@ -37,7 +37,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="">
-            <div className="relative z-10">
+            <div className="relative ">
               <img
                 src="src/assets/image/organic-honey-bottles-product-photography.jpg"
                 alt="Organic Honey Products"

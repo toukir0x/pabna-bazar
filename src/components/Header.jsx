@@ -1,11 +1,14 @@
 import { Phone, Search,ShoppingCart } from "lucide-react";
 import { CategoryNav } from "./category-nav";
 
-function Header({ selectedCategory, setSelectedCategory }) {
+function Header({ selectedCategory, setSelectedCategory ,setOpenCart}) {
+  
   return (
     <>
-      <header className="sticky top-0 z-50 bg-amber-50 ">
-        <div className="bg-amber-700 text-primary-foreground py-2 px-8">
+    
+      {/* header bar */}
+      <header className="sticky top-0 z-10 bg-amber-50 ">
+        <div className="bg-amber-700 py-2 px-8">
           <div className=" mx-auto text-white md:flex-row  flex flex-col items-start md:items-center justify-between md:text-xl text-xl">
             <div className="flex  md:items-center sm:flex-row justify-between gap-6 md:gap-32">
               <div className="flex items-center gap-2">
@@ -21,7 +24,7 @@ function Header({ selectedCategory, setSelectedCategory }) {
           </div>
         </div>
 
-        <div className="flex items-center justify-between text-black md:gap-6 px-2 md:px-8 py-1">
+        <div className="flex items-center justify-between text-black md:gap-6 px-2 md:px-8 py-1 pt-2">
           <div className="h-10 w-auto gap-2 rounded-full bg-accent flex items-center justify-center">
             <span className="text-2xl bg-amber-500 font-bold rounded-full p-2 text-accent-foreground">
               🌿
@@ -29,7 +32,7 @@ function Header({ selectedCategory, setSelectedCategory }) {
             <h4 className=" text-sm md:text-2xl font-bold">Organic Bazaar</h4>
           </div>
 
-          <div className=" md:flex flex-1 max-w-xl mx-8 py-4 hidden">
+          <div className=" md:flex flex-1 max-w-xl mx-8  hidden">
             <div className="relative w-full border rounded-2xl  hover:border-amber-600 focus-within:border-amber-900 px-3 py-1 flex items-center">
               <Search className="absolute left-3   h-4 w-4 " />
               <input
@@ -48,13 +51,12 @@ function Header({ selectedCategory, setSelectedCategory }) {
               Contact
             </button>
 
-            <button variant="ghost" size="icon" className="relative">
+            <button className="relative" onClick={() => {setOpenCart(true)}}>
               <ShoppingCart className="h-5 w-5" />
               {/* {getTotalItems() > 0 && ( */}
               <span className="absolute -top-1 -right-1/9 h-5 w-5 bg-amber-600 rounded-full  text-xs flex items-center justify-center">
                 1{/* {getTotalItems()} */}
               </span>
-              {/* // )} */}
             </button>
           </div>
         </div>

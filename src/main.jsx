@@ -16,7 +16,7 @@ const container = ReactDOM.createRoot(document.getElementById('root'))
 container.render(
     <BrowserRouter> 
     <Home />
-    <Cart/>
+    
    
     
   </BrowserRouter>

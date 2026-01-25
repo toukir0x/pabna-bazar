@@ -4,10 +4,23 @@ import Products from '../assets/Products.json';
 import ProductModal from "./ProductModal";
 
 const ProductGrid = ({ selectedCategory }) => {
-    const filteredProducts = selectedCategory === "all" ? Products : (Products.filter(product => product.category === selectedCategory));
-  return (
-    <>
-      <div className=" p-8 text-center">
+  const [selectedProduct, setSelectedProduct] = React.useState(null);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const filteredProducts = selectedCategory === "all" ? Products : (Products.filter(product => product.category === selectedCategory));
+  // if (isModalOpen) {
+  //   return(
+  //     <ProductModal selectedProduct={selectedProduct} setIsModalOpen={setIsModalOpen} />
+  //   )
+  // }
+    return (
+      <>
+       {(isModalOpen)&&(
+      <ProductModal selectedProduct={selectedProduct} setIsModalOpen={setIsModalOpen} />
+        )}
+
+      {/* show product grid   */}
+      <div className={`p-8 text-center {isModalOpen ? "fixed!" : ""}`}>
         <h1 className="font-bold text-3xl p-4">
           {selectedCategory.toUpperCase()}
         </h1>
@@ -16,22 +29,13 @@ const ProductGrid = ({ selectedCategory }) => {
           <>
             <p>
               <span>{filteredProducts.length}</span> products available
-            </p>
+              </p>
 
-            <div className=" flex flex-wrap gap-6 justify-center ">
+            <div className=" flex flex-wrap gap-6 justify-center transition-all duration-300 ">
               {filteredProducts.map((product) => (
                 <Product
                   key={product.id}
-                //   name={product.name}
-                //   price={product.price}
-                //   src={product.image}
-                //   badge={product.badge}
-                //   discount={Math.round(
-                //     ((product.originalPrice - product.price) /
-                //       product.originalPrice) *
-                //       100,
-                      //   )}
-                    {...product}
+                    product={product} setSelectedProduct={setSelectedProduct} setIsModalOpen={setIsModalOpen}
                 />
               ))}
             </div>
